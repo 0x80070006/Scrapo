@@ -1,381 +1,547 @@
 <div align="center">
 
-<!-- TITRE PRINCIPAL avec fond bleu + texte vert + grenouille -->
-<img src="https://img.shields.io/badge/🐸_SCRAPO-33FF66?style=for-the-badge&labelColor=1565C0&color=1565C0&label=%F0%9F%90%B8+SCRAPO" height="50" alt="Scrapo"/>
+![Scrapo Banner](BANNER.svg)
 
-<br/>
+### *L'interface ultime pour découvrir et télécharger films & séries*
 
-<!-- SVG custom : SCRAPO fond bleu texte vert avec grenouille -->
-<img src="https://img.shields.io/badge/%F0%9F%90%B8%20SCRAPO-brightgreen?style=for-the-badge&color=1A56DB&labelColor=1A56DB&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHRleHQgeT0iMjQiIGZvbnQtc2l6ZT0iMjQiPvCfkLg8L3RleHQ+PC9zdmc+" height="0"/>
+[![Version](https://img.shields.io/badge/version-5.0-brightgreen?style=for-the-badge)](https://github.com/votre-username/scrapo)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/)
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-2.0+-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
-<!-- Titre visuel SVG fait main : fond bleu, texte vert, grenouille -->
-<svg width="400" height="80" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="80" rx="12" fill="#1A56DB"/>
-  <text x="200" y="52" font-family="Arial Black, Arial" font-size="38" font-weight="900" fill="#22C55E" text-anchor="middle" letter-spacing="4">🐸 SCRAPO</text>
-</svg>
+**Scrapo bondit dans votre collection !** 🎬
 
-**Client Jellyfin musical · Style Spotify · Sombre & Violet**
+Interface web inspirée de Jellyseerr pour découvrir, rechercher et télécharger des films et séries depuis des sites de streaming français.
 
-<br/>
+[🚀 Installation](#-installation) • [📖 Documentation](#-utilisation) • [🐛 Support](#-dépannage) • [⭐ Star](#)
 
-<!-- BADGES PRINCIPAUX -->
-[![Version](https://img.shields.io/badge/version-1.0.0--demo-22C55E?style=flat-square&logo=github&logoColor=white)](../../releases)
-[![Statut](https://img.shields.io/badge/statut-en%20développement-orange?style=flat-square&logo=github-actions&logoColor=white)](../../releases)
-[![Flutter](https://img.shields.io/badge/Flutter-3.16+-02569B?style=flat-square&logo=flutter&logoColor=white)](https://flutter.dev)
-[![Android](https://img.shields.io/badge/Android-5.0%2B-3DDC84?style=flat-square&logo=android&logoColor=white)](../../releases)
-[![Jellyfin](https://img.shields.io/badge/Jellyfin-10.8%2B-00A4DC?style=flat-square&logo=jellyfin&logoColor=white)](https://jellyfin.org)
-[![Licence MIT](https://img.shields.io/badge/licence-MIT-blue?style=flat-square&logo=opensourceinitiative&logoColor=white)](LICENSE)
-
-<br/>
-
-<!-- STATS REPO -->
-![GitHub stars](https://img.shields.io/github/stars/TONUSER/scrapo?style=flat-square&logo=github&color=yellow)
-![GitHub forks](https://img.shields.io/github/forks/TONUSER/scrapo?style=flat-square&logo=github&color=blue)
-![GitHub issues](https://img.shields.io/github/issues/TONUSER/scrapo?style=flat-square&logo=github&color=red)
-![GitHub last commit](https://img.shields.io/github/last-commit/TONUSER/scrapo?style=flat-square&logo=github)
+---
 
 </div>
-
----
-
-> [!WARNING]
-> **🚧 VERSION DÉMO — EN DÉVELOPPEMENT ACTIF 🚧**
->
-> Scrapo est actuellement en phase de démonstration. Le code source est disponible pour compiler vous-même l'application.  
-> Les binaires précompilés **(APK Android & EXE Windows)** arrivent prochainement dans les [**Releases**](../../releases). 🐸
-
----
-
-<br/>
 
 ## 📸 Aperçu
 
 <div align="center">
 
-| 🔐 Connexion | 🏠 Accueil | 🎧 Lecteur |
+| 🎯 Découverte | 📦 Gestion | 🎨 Interface |
 |:---:|:---:|:---:|
-| <img src="https://placehold.co/160x290/0D0D1A/22C55E?text=%F0%9F%90%B8+Login%0A%0ADEMO&font=roboto" width="150"/> | <img src="https://placehold.co/160x290/0D0D1A/1A56DB?text=%F0%9F%90%B8+Accueil%0A%0ADEMO&font=roboto" width="150"/> | <img src="https://placehold.co/160x290/1A0533/22C55E?text=%F0%9F%90%B8+Player%0A%0ADEMO&font=roboto" width="150"/> |
-
-| 🔍 Recherche | 📚 Bibliothèque | 🎶 Playlists |
-|:---:|:---:|:---:|
-| <img src="https://placehold.co/160x290/0D0D1A/22C55E?text=%F0%9F%90%B8+Search%0A%0ADEMO&font=roboto" width="150"/> | <img src="https://placehold.co/160x290/0D0D1A/1A56DB?text=%F0%9F%90%B8+Biblio%0A%0ADEMO&font=roboto" width="150"/> | <img src="https://placehold.co/160x290/0D0D1A/22C55E?text=%F0%9F%90%B8+Playlist%0A%0ADEMO&font=roboto" width="150"/> |
-
-*📸 Captures d'écran réelles à venir lors de la première release officielle*
+| 20+ catégories | Panier unifié | Design moderne |
+| 11 Studios | Scroll infini | Thème sombre |
+| 6 Networks TV | Téléchargement | Responsive |
 
 </div>
 
-<br/>
+### ✨ Fonctionnalités Principales
+
+```
+🎬 Trending, Popular, Upcoming          📺 Netflix, Disney+, Prime Video
+🎭 Genres Films & Séries                🏢 Marvel, Disney, Warner, etc.
+🟢 Détection Jellyfin (contour vert)    🔴 Badge SÉRIE automatique
+🔍 Recherche intelligente                📥 Extraction liens (3 formats)
+❤️ Système de panier                     ♾️ Scroll infini sur toutes les pages
+```
 
 ---
 
-## 📦 Téléchargement
+## 🚀 Installation
+
+### 🐳 Méthode Rapide (Docker)
+
+```bash
+# Cloner le repo
+git clone https://github.com/votre-username/scrapo.git
+cd scrapo
+
+# Lancer avec Docker Compose
+docker-compose up -d
+
+# Accéder à Scrapo
+open http://localhost:5000
+```
+
+### 🔧 Installation Manuelle
+
+```bash
+# Cloner le repo
+git clone https://github.com/votre-username/scrapo.git
+cd scrapo
+
+# Installer les dépendances
+pip install -r requirements.txt
+
+# Lancer l'application
+python app.py
+```
 
 <div align="center">
 
-| Plateforme | Statut | Action |
-|:---:|:---:|:---:|
-| 📱 **Android APK** | ![soon](https://img.shields.io/badge/🔜-Bientôt-1A56DB?style=flat-square) | [Voir les Releases](../../releases) |
-| 🖥️ **Windows EXE** | ![wip](https://img.shields.io/badge/🛠️-En%20développement-orange?style=flat-square) | — |
-| 🍎 **iOS / macOS** | ![planned](https://img.shields.io/badge/📋-Prévu-grey?style=flat-square) | — |
+**🎉 C'est tout ! Scrapo est prêt à bondir ! 🐸**
 
 </div>
 
-> 💡 En attendant, compilez l'APK vous-même en 3 commandes → [voir ici](#-compiler-lapk-soi-même)
-
-<br/>
-
 ---
 
-## ✨ Fonctionnalités
+## ⚙️ Configuration
 
 <table>
 <tr>
-<td valign="top" width="50%">
+<td width="33%">
 
-### 🔐 Connexion & Session
-- Saisie libre de l'adresse IP, port, login/mdp
-- Session persistante (reconnexion automatique)
-- Déconnexion propre depuis le profil
+### 🎬 Jellyfin
+**Optionnel mais recommandé**
 
-### 🎧 Lecture audio
-- Streaming direct depuis votre serveur Jellyfin
-- Play / Pause / Suivant / Précédent
-- Barre de progression interactive et draggable
-- Répétition : off / tout / titre en cours
-- Lecture aléatoire (shuffle)
+```yaml
+URL: http://192.168.1.100:8096
+API Key: Tableau de bord > Clés API
+```
 
-### 📻 Mini-player
-- Toujours visible en bas pendant la navigation
-- Contrôles complets sans quitter l'écran
+✅ Section "Recently Added"  
+✅ Contour vert pour films possédés  
+✅ Évite les doublons
 
 </td>
-<td valign="top" width="50%">
+<td width="33%">
 
-### 🏠 Navigation style Spotify
-- Accueil : albums récents & derniers ajouts
-- Recherche temps réel (titres, albums, artistes)
-- Bibliothèque : Artistes · Albums · Favoris
-- Vue artiste avec discographie complète
-- Vue album avec tracklist numérotée
+### 🎯 Jellyseerr
+**Requis**
 
-### 🎶 Playlists locales
-- Créer, renommer, supprimer
-- Ajouter / retirer des titres
-- Réorganiser par glisser-déposer
-- Lecture depuis n'importe quelle position
+```yaml
+URL: http://192.168.1.100:5055
+API Key: Paramètres > API Key
+```
 
-### ❤️ Favoris
-- Synchronisés directement avec Jellyfin
-- Accessibles depuis la bibliothèque
+✅ Source films/séries  
+✅ Genres & Studios  
+✅ Networks TV
+
+</td>
+<td width="33%">
+
+### 🌐 Streaming
+**Optionnel**
+
+```yaml
+URL: https://fs9.lol
+```
+
+✅ Recherche films  
+✅ Extraction liens  
+✅ 3 formats (TF/FR/VOSTFR)
 
 </td>
 </tr>
 </table>
 
-<br/>
-
 ---
 
-## 🎨 Design
+## 📖 Utilisation
 
-Thème **100% sombre** avec dégradés bleu/violet :
+### 🎬 Découvrir des Films
+
+```mermaid
+graph LR
+    A[🏠 Homepage] --> B[📺 Section]
+    B --> C[👁️ See More]
+    C --> D[♾️ Scroll Infini]
+    D --> E[🎬 Films chargés]
+```
+
+### 📥 Télécharger un Film
 
 <div align="center">
 
-| Rôle | Aperçu | Code hex |
-|------|:------:|----------|
-| Fond principal | ![#080812](https://img.shields.io/badge/-%20-080812?style=flat-square) | `#080812` |
-| Accent violet | ![#7B2FBE](https://img.shields.io/badge/-%20-7B2FBE?style=flat-square) | `#7B2FBE` |
-| Accent bleu | ![#4A90D9](https://img.shields.io/badge/-%20-4A90D9?style=flat-square) | `#4A90D9` |
-| Surfaces | ![#12122A](https://img.shields.io/badge/-%20-12122A?style=flat-square) | `#12122A` |
-| Texte secondaire | ![#8888AA](https://img.shields.io/badge/-%20-8888AA?style=flat-square) | `#8888AA` |
+| Étape | Action | Icône |
+|:---:|:---|:---:|
+| 1 | Rechercher le film | 🔍 |
+| 2 | Clic sur résultat | 👆 |
+| 3 | Clic icône téléchargement | 📥 |
+| 4 | Choisir format (TF/FR/VOSTFR) | 🇫🇷 |
+| 5 | Télécharger | ⬇️ |
 
 </div>
 
-<br/>
+### ❤️ Gérer le Panier
+
+```
+1. Hover sur un film/série
+2. Clic sur icône ❤️
+3. Consulter panier via 🛒 (header)
+4. Gérer vos demandes
+```
 
 ---
 
-## 🚀 Compiler l'APK soi-même
+## 🏗️ Architecture
 
-### Prérequis
-
-[![Flutter](https://img.shields.io/badge/Flutter%20SDK-3.0+-02569B?style=flat-square&logo=flutter)](https://flutter.dev/docs/get-started/install)
-[![Android SDK](https://img.shields.io/badge/Android%20SDK-API%2021+-3DDC84?style=flat-square&logo=android)](https://developer.android.com/studio)
-[![Java](https://img.shields.io/badge/Java-11+-ED8B00?style=flat-square&logo=openjdk&logoColor=white)](https://adoptium.net)
-
-### En 3 commandes
-
-```bash
-# 1. Installer les dépendances
-flutter pub get
-
-# 2. Compiler l'APK release
-flutter build apk --release
-
-# ✅ L'APK est prêt ici :
-#    build/app/outputs/flutter-apk/app-release.apk
-```
-
-> **Mode debug** (plus rapide, pas besoin de signature) :
-> ```bash
-> flutter build apk --debug
-> ```
-
-### Installer sur Android
-
-```bash
-# Via ADB (câble USB + debug USB activé)
-adb install build/app/outputs/flutter-apk/app-release.apk
-```
-
-Ou copiez le fichier `.apk` directement sur le téléphone et installez-le  
-*(activer "Sources inconnues" dans Paramètres → Sécurité)*
-
-<br/>
-
----
-
-## ☁️ Compiler via GitHub Actions
-
-> Pas Flutter sur votre machine ? Pas de problème. Forkez le repo et créez ce fichier :
-
-**`.github/workflows/build.yml`**
-
-```yaml
-name: 🐸 Build Scrapo APK
-
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
-
-jobs:
-  build-android:
-    name: Build APK Android
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: 📥 Checkout
-        uses: actions/checkout@v4
-
-      - name: 🐦 Setup Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.16.0'
-          channel: 'stable'
-
-      - name: 📦 Installer les dépendances
-        run: flutter pub get
-
-      - name: 🔨 Compiler l'APK
-        run: flutter build apk --release
-
-      - name: 📤 Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: scrapo-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
-          retention-days: 30
-```
-
-L'APK sera disponible dans **Actions → votre workflow → Artifacts**.
-
-<br/>
-
----
-
-## 📁 Structure du projet
+<details>
+<summary><b>📂 Structure du Projet</b></summary>
 
 ```
 scrapo/
-├── 📄 pubspec.yaml                        # Dépendances Flutter
-├── lib/
-│   ├── 📄 main.dart                       # Point d'entrée & thème global
-│   │
-│   ├── models/
-│   │   └── 📄 media_item_model.dart       # Modèle de données unifié
-│   │
-│   ├── services/
-│   │   ├── 📄 jellyfin_service.dart       # API Jellyfin (auth, stream, search…)
-│   │   ├── 📄 player_service.dart         # Lecteur audio (just_audio)
-│   │   └── 📄 playlist_service.dart       # Playlists locales (SharedPreferences)
-│   │
-│   ├── screens/
-│   │   ├── 📄 login_screen.dart           # Écran de connexion
-│   │   ├── 📄 home_screen.dart            # Navigation principale (BottomNav)
-│   │   ├── 📄 home_tab.dart               # Onglet Accueil
-│   │   ├── 📄 library_screen.dart         # Bibliothèque + ArtistScreen
-│   │   ├── 📄 search_screen.dart          # Recherche temps réel
-│   │   ├── 📄 playlists_screen.dart       # Playlists + PlaylistDetailScreen
-│   │   ├── 📄 album_screen.dart           # Vue album avec tracklist
-│   │   └── 📄 player_screen.dart          # Lecteur plein écran
-│   │
-│   └── widgets/
-│       ├── 📄 mini_player.dart            # Barre de lecture persistante
-│       ├── 📄 album_card.dart             # Carte album (grille / liste)
-│       └── 📄 track_tile.dart             # Ligne de piste + menu contextuel
-│
-└── android/
-    └── app/
-        ├── 📄 build.gradle                # Configuration build Android
-        └── src/main/
-            ├── 📄 AndroidManifest.xml     # Permissions & déclaration d'activité
-            └── kotlin/…/MainActivity.kt
+├── 🐍 app.py                          Backend Flask + Routes API
+├── 📁 templates/
+│   ├── 🏠 index.html                  Page d'accueil (9 sections)
+│   └── 🔍 discover.html               Pages discover (scroll infini)
+├── 📁 static/
+│   ├── 💻 app.js                      Logic homepage
+│   ├── ♾️ discover.js                  Logic scroll infini
+│   └── 🎨 style.css                    Styles (badges, contours)
+├── 📁 scraper/
+│   └── 🤖 selenium_scraper.py         Extraction liens streaming
+├── 🐳 Dockerfile                      Image Docker
+├── 🐳 docker-compose.yml              Orchestration
+└── 📦 requirements.txt                Dépendances Python
 ```
 
-<br/>
+</details>
+
+<details>
+<summary><b>🔌 Endpoints API</b></summary>
+
+### Jellyfin
+| Méthode | Endpoint | Description |
+|:---:|:---|:---|
+| `GET` | `/api/jellyfin/movies` | Liste films Jellyfin |
+| `POST` | `/api/settings/jellyfin` | Configuration Jellyfin |
+
+### Jellyseerr
+| Méthode | Endpoint | Description |
+|:---:|:---|:---|
+| `GET` | `/api/jellyseerr/trending` | Films/séries trending |
+| `GET` | `/api/jellyseerr/movies` | Popular movies |
+| `GET` | `/api/jellyseerr/category?category=X&page=N` | Catégorie spécifique |
+| `POST` | `/api/settings/jellyseerr` | Configuration Jellyseerr |
+
+### Streaming
+| Méthode | Endpoint | Description |
+|:---:|:---|:---|
+| `GET` | `/api/search?q=X` | Recherche film |
+| `GET` | `/api/download-links?url=X` | Extraction liens |
+| `POST` | `/api/settings/streaming` | Configuration site |
+
+### Panier
+| Méthode | Endpoint | Description |
+|:---:|:---|:---|
+| `GET` | `/api/basket` | Liste panier |
+| `POST` | `/api/basket/add` | Ajouter item |
+| `DELETE` | `/api/basket/remove/<index>` | Supprimer item |
+| `POST` | `/api/basket/clear` | Vider panier |
+
+</details>
 
 ---
 
-## ⚙️ Configuration Jellyfin
+## 🎨 Personnalisation
 
-```
-✅  Jellyfin Server v10.8 ou supérieur
-✅  Bibliothèque musicale configurée
-✅  Accessible en HTTP (local) ou HTTPS (distant)
+### 🌈 Modifier les Couleurs
+
+Éditez `static/style.css` :
+
+```css
+:root {
+    --bg-primary: #0f1419;      /* 🌑 Fond principal */
+    --bg-secondary: #1e293b;    /* 🎴 Cartes */
+    --text-primary: #e2e8f0;    /* 📝 Texte */
+    --accent: #a78bfa;          /* 💜 Accent violet */
+    --jellyfin: #10b981;        /* 🟢 Vert Jellyfin */
+    --serie: #ef4444;           /* 🔴 Rouge série */
+}
 ```
 
-**Format de l'adresse :**
-```
-Local   →  http://192.168.1.42:8096
-Distant →  https://jellyfin.mondomaine.com
-```
-> ⚠️ Ne pas mettre de `/` à la fin de l'URL
+### 🏢 Ajouter un Studio/Network
 
-<br/>
+**Frontend** (`templates/index.html`) :
+```html
+<div class="genre-card" onclick="navigateToStudio(123)">Mon Studio</div>
+```
+
+**Titres** (`static/discover.js`) :
+```javascript
+const titles = {
+    'studio_123': 'Mon Studio',
+    'network_456': 'Mon Network'
+};
+```
+
+> **💡 Note** : Le backend gère automatiquement les nouveaux studios/networks via leur ID TMDB !
 
 ---
 
-## 🗺️ Roadmap
+## 🐛 Dépannage
 
-| # | Fonctionnalité | Statut |
-|---|----------------|:------:|
-| ✅ | Authentification Jellyfin | Fait |
-| ✅ | Streaming audio natif | Fait |
-| ✅ | Navigation 4 onglets (Accueil / Recherche / Biblio / Playlists) | Fait |
-| ✅ | Lecteur plein écran style Spotify | Fait |
-| ✅ | Mini-player persistant | Fait |
-| ✅ | Playlists locales (CRUD + réorganisation) | Fait |
-| ✅ | Favoris synchronisés Jellyfin | Fait |
-| 🔜 | **APK release publique** | Bientôt |
-| 🛠️ | **Version Windows EXE** | En cours |
-| 📋 | File d'attente éditable | Prévu |
-| 📋 | Paroles synchronisées (LRC) | Prévu |
-| 📋 | Widget Android (écran verrouillé) | Prévu |
-| 📋 | Égaliseur audio | Prévu |
-| 📋 | Thèmes de couleur personnalisables | Prévu |
+<details>
+<summary><b>♾️ Le scroll infini ne fonctionne pas</b></summary>
 
-<br/>
+**Symptômes** : Seulement 1-2 lignes de films, rien ne charge
 
----
+**Solutions** :
 
-## 🤝 Contribuer
+1. Ouvrir la Console (F12) et vérifier les logs :
+```javascript
+📥 Chargement page 1 pour movies
+✅ 20 items reçus
+🔄 Scroll détecté - Chargement page 2  // ← Doit apparaître au scroll
+```
 
-Les contributions sont les bienvenues ! 🐸
-
+2. Vérifier configuration Jellyseerr :
 ```bash
-# 1. Forkez le projet sur GitHub
-# 2. Créez votre branche
-git checkout -b feature/ma-super-fonctionnalite
-
-# 3. Committez vos changements
-git commit -m "feat: ajout de X"
-
-# 4. Poussez
-git push origin feature/ma-super-fonctionnalite
-
-# 5. Ouvrez une Pull Request 🎉
+curl http://localhost:5000/api/jellyseerr/category?category=movies&page=2
 ```
 
-Pour signaler un bug ou proposer une idée → [**Ouvrir une Issue**](../../issues) 🐛
+3. Vérifier dans les logs Docker :
+```bash
+docker-compose logs -f
+```
 
-<br/>
+</details>
+
+<details>
+<summary><b>🎬 Pas de films affichés</b></summary>
+
+**Causes** :
+- ❌ Jellyseerr non configuré
+- ❌ URL incorrecte
+- ❌ API Key invalide
+- ❌ Jellyseerr non accessible
+
+**Test** :
+```bash
+# Depuis le container
+docker exec -it scrapo curl http://jellyseerr:5055/api/v1/discover/movies
+
+# Depuis votre machine
+curl http://localhost:5055/api/v1/discover/movies -H "X-Api-Key: VOTRE_CLE"
+```
+
+</details>
+
+<details>
+<summary><b>❤️🔍 Icônes absentes</b></summary>
+
+**Causes possibles** :
+- ✅ Film déjà sur Jellyfin (normal, contour vert = pas d'icônes)
+- ❌ CSS non chargé
+
+**Vérification Console (F12)** :
+```javascript
+// Hover sur carte → doit afficher :
+<div class="card-overlay">
+    <button class="card-btn">❤️</button>
+    <button class="card-btn">🔍</button>
+</div>
+```
+
+</details>
+
+<details>
+<summary><b>📥 Extraction liens échoue</b></summary>
+
+**Solutions** :
+1. Vérifier que le site streaming est accessible
+2. Essayer un autre film (certains n'ont pas de liens)
+3. Vérifier les logs :
+```bash
+docker-compose logs -f scrapo
+```
+4. Tester manuellement l'extraction :
+```bash
+curl "http://localhost:5000/api/download-links?url=https://fs9.lol/12345-film.html"
+```
+
+</details>
 
 ---
 
-## 📄 Licence
-
-Ce projet est distribué sous licence **MIT** — voir [LICENSE](LICENSE) pour les détails.
-
-[![Licence MIT](https://img.shields.io/badge/Licence-MIT-blue?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
-
-<br/>
-
----
+## 🛡️ Sécurité & Légalité
 
 <div align="center">
 
-🐸 Fait avec amour, Flutter et caféine
+⚠️ **AVERTISSEMENT IMPORTANT** ⚠️
 
-Propulsé par [**Jellyfin**](https://jellyfin.org) · Inspiré de [**Spotify**](https://spotify.com)
+</div>
 
-*Scrapo n'est pas affilié à Jellyfin ni à Spotify.*
+| ⚠️ Point d'attention | 📋 Recommandation |
+|:---|:---|
+| **Usage personnel** | Destiné à un usage privé uniquement |
+| **Droit d'auteur** | Respecter les lois sur le copyright de votre pays |
+| **Sites streaming** | Vérifier la légalité dans votre juridiction |
+| **Réseau** | Ne pas exposer publiquement sans authentification |
 
-<br/>
+### 🔒 Bonnes Pratiques
 
-[![GitHub](https://img.shields.io/badge/GitHub-TONUSER%2Fscrapo-181717?style=flat-square&logo=github)](../../)
-[![Issues](https://img.shields.io/badge/Issues-Signaler%20un%20bug-red?style=flat-square&logo=github)](../../issues)
-[![Pull Requests](https://img.shields.io/badge/PR-Contribuer-22C55E?style=flat-square&logo=github)](../../pulls)
+```
+✅ Utiliser un VPN pour le téléchargement
+✅ Héberger uniquement sur réseau local
+✅ Changer les clés API par défaut
+✅ Utiliser HTTPS en production
+✅ Sauvegarder régulièrement votre configuration
+```
+
+---
+
+## 🛠️ Stack Technique
+
+<div align="center">
+
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)](https://www.selenium.dev/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+</div>
+
+### 📦 Dépendances Principales
+
+- **Backend** : Flask 2.0+, Requests, Selenium
+- **Frontend** : Vanilla JavaScript ES6+, CSS3
+- **Base de données** : TMDB (via Jellyseerr)
+- **Containerisation** : Docker & Docker Compose
+
+---
+
+## 📋 Roadmap
+
+<div align="center">
+
+### 🚧 Fonctionnalités Prévues
+
+</div>
+
+```
+🔐 v5.1 - Authentification utilisateur
+🌍 v5.2 - Support multi-langues (EN, ES, DE)
+🔔 v5.3 - Notifications (Discord, Telegram, Email)
+📊 v5.4 - Statistiques & Historique téléchargements
+⚡ v5.5 - Intégration Radarr/Sonarr
+📋 v5.6 - Mode liste + Filtres avancés
+💾 v5.7 - Export données (CSV, JSON)
+🎨 v5.8 - Thèmes personnalisables
+🔍 v5.9 - Recherche avancée (année, note, acteurs)
+🤖 v6.0 - Téléchargement automatique via IA
+```
+
+---
+
+## 🤝 Contribution
+
+<div align="center">
+
+**Les contributions sont les bienvenues ! 🐸**
+
+</div>
+
+### 🎯 Comment Contribuer
+
+1. 🍴 **Fork** le projet
+2. 🌿 **Créer une branche** : `git checkout -b feature/SuperFeature`
+3. ✍️ **Commit** : `git commit -m '✨ Add SuperFeature'`
+4. 📤 **Push** : `git push origin feature/SuperFeature`
+5. 🔀 **Pull Request**
+
+### 📐 Guidelines
+
+| Domaine | Convention |
+|:---|:---|
+| **Python** | PEP 8 |
+| **JavaScript** | ES6+ |
+| **Commits** | [Gitmoji](https://gitmoji.dev/) recommandé |
+| **Tests** | Tester avec Docker avant PR |
+
+<details>
+<summary><b>🎨 Exemples de Messages de Commit</b></summary>
+
+```
+✨ Add new feature
+🐛 Fix scroll infinite bug
+📝 Update documentation
+🎨 Improve UI design
+♻️ Refactor code
+🔧 Update configuration
+🚀 Deploy version 5.0
+```
+
+</details>
+
+---
+
+## 📊 Stats GitHub
+
+<div align="center">
+
+![GitHub stars](https://img.shields.io/github/stars/votre-username/scrapo?style=social)
+![GitHub forks](https://img.shields.io/github/forks/votre-username/scrapo?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/votre-username/scrapo?style=social)
+
+[![GitHub issues](https://img.shields.io/github/issues/votre-username/scrapo?style=for-the-badge)](https://github.com/votre-username/scrapo/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/votre-username/scrapo?style=for-the-badge)](https://github.com/votre-username/scrapo/pulls)
+
+</div>
+
+---
+
+## 📄 License
+
+<div align="center">
+
+Ce projet est sous licence **MIT**.
+
+Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+</div>
+
+---
+
+## 🙏 Remerciements
+
+<div align="center">
+
+Un grand merci à :
+
+</div>
+
+- 🎬 **[Jellyseerr](https://github.com/Fallenbagel/jellyseerr)** - Inspiration pour le design
+- 🎞️ **[Jellyfin](https://jellyfin.org/)** - Intégration bibliothèque multimédia
+- 🎭 **[TMDB](https://www.themoviedb.org/)** - Base de données films & séries
+- 🐳 **[Docker](https://www.docker.com/)** - Containerisation
+- 👥 **La communauté** - Retours, suggestions et contributions
+
+---
+
+## 📞 Support & Contact
+
+<div align="center">
+
+**Besoin d'aide ? Scrapo est là pour vous ! 🐸**
+
+[![GitHub Issues](https://img.shields.io/badge/Issues-GitHub-red?style=for-the-badge&logo=github)](https://github.com/votre-username/scrapo/issues)
+[![Discussions](https://img.shields.io/badge/Discussions-GitHub-green?style=for-the-badge&logo=github)](https://github.com/votre-username/scrapo/discussions)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/votre-serveur)
+
+</div>
+
+---
+
+## ⭐ Star History
+
+<div align="center">
+
+**Si Scrapo vous a aidé, donnez-lui une ⭐ !**
+
+[![Star History Chart](https://api.star-history.com/svg?repos=votre-username/scrapo&type=Date)](https://star-history.com/#votre-username/scrapo&Date)
+
+---
+
+### 🐸 Fait avec ❤️ pour la communauté française
+
+**Scrapo v5.0** - *Bondissez dans votre collection de films !* 🎬🍿
+
+[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge)]()
+[![Made in France](https://img.shields.io/badge/Made%20in-🇫🇷%20France-blue?style=for-the-badge)]()
 
 </div>
