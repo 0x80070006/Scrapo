@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-left">
+            <a href="/" class="icon-btn" title="Retour">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+        <div class="header-center">
+            <h1 id="discoverTitle" style="font-size: 1.5em; font-weight: 600; color: #e2e8f0;">Discover</h1>
+        </div>
+        <div class="header-right">
+            <a href="/" class="icon-btn" title="Accueil">
+                <i class="fas fa-home"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Discover Content -->
+    <div class="discover-content">
+        <div class="discover-grid" id="discoverGrid"></div>
+        <div class="loading" id="loading" style="display:none;">
+            <div class="spinner"></div>
+            <p>Chargement...</p>
+        </div>
+    </div>
+
+    <!-- Download Modal -->
+    <div class="modal" id="downloadModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="downloadTitle">Téléchargement</h2>
+                <button class="close-btn" onclick="closeDownloadModal()">&times;</button>
+            </div>
+            <div id="downloadOptions"></div>
+        </div>
+    </div>
+
+    <!-- Search Results Modal -->
+    <div class="modal" id="searchModal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h2 id="searchTitle">Résultats</h2>
+                <button class="close-btn" onclick="closeSearchModal()">&times;</button>
+            </div>
+            <div id="searchResults" class="search-grid"></div>
+        </div>
+    </div>
+
+    <script>
+        // Fonctions pour les modals
+        function closeDownloadModal() {
+            document.getElementById('downloadModal').classList.remove('active');
+        }
+
+        function closeSearchModal() {
+            document.getElementById('searchModal').classList.remove('active');
+        }
+
+        async function openDownload(url, title) {
+            document.getElementById('downloadTitle').textContent = title;
+            document.getElementById('downloadOptions').innerHTML = '<div class="loading"><div class="spinner"></div><p>Extraction...</p></div>';
+            document.getElementById('downloadModal').classList.add('active');
+            
+            try {
+                const response = await fetch(`/api/download-links?url=${encodeURIComponent(url)}`);
+                const data = await response.json();
+                const options = document.getElementById('downloadOptions');
+                
+                if (data.success && data.links) {
+                    const hasLinks = data.links.truefrench || data.links.french || data.links.vostfr;
+                    if (hasLinks) {
+                        options.innerHTML = `<div class="download-options">
+                            ${data.links.truefrench ? `<a href="${data.links.truefrench}" class="download-option" download="${title}_TRUEFRENCH.mp4">🇫🇷 TRUEFRENCH</a>` : ''}
+                            ${data.links.french ? `<a href="${data.links.french}" class="download-option" download="${title}_FRENCH.mp4">🇫🇷 FRENCH</a>` : ''}
+                            ${data.links.vostfr ? `<a href="${data.links.vostfr}" class="download-option" download="${title}_VOSTFR.mp4">🇬🇧 VOSTFR</a>` : ''}
+                        </div>`;
+                    } else {
+                        options.innerHTML = '<p style="text-align:center;color:#94a3b8;">Aucun lien disponible</p>';
+                    }
+                } else {
+                    options.innerHTML = '<p style="text-align:center;color:#94a3b8;">Aucun lien disponible</p>';
+                }
+            } catch (error) {
+                document.getElementById('downloadOptions').innerHTML = '<p style="text-align:center;color:#ef4444;">Erreur</p>';
+            }
+        }
+    </script>
+    <script src="/static/discover.js"></script>
+</body>
+</html>
