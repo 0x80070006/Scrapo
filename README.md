@@ -1,4 +1,4 @@
-# 🎬 Film Scraper Ultimate
+# 🎬 Film Scraper Ultimate (Scrapo)
 
 Interface web inspirée de **Jellyseerr** pour découvrir, rechercher et télécharger des films et séries depuis des sites de streaming français. S'intègre avec **Jellyfin** et **Jellyseerr** pour une expérience complète.
 
