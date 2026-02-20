@@ -38,6 +38,54 @@ Découvrez films et séries avec une interface élégante aux couleurs **vert é
 
 ---
 
+## 🖼️ Screenshots
+
+<div align="center">
+
+### 🏠 Page d'Accueil
+*Découvrez les tendances, films populaires et séries du moment*
+
+![Page d'accueil](./scrapo_screen1.png)
+
+---
+
+### 🔍 Recherche de Film
+*Recherchez instantanément n'importe quel film ou série*
+
+![Recherche](./scrapo_screen2.png)
+
+---
+
+### 📺 Page Découverte
+*Explorez par genres, studios et réseaux*
+
+![Découverte](./scrapo_screen3.png)
+
+---
+
+### ⚙️ Paramètres
+*Configurez Jellyfin, Jellyseerr et vos sites de streaming*
+
+![Paramètres](./scrapo_screen4.png)
+
+---
+
+### ❤️ Panier de Favoris
+*Gérez votre liste de films et séries à regarder*
+
+![Panier](./scrapo_screen5.png)
+
+---
+
+### 🎬 Options de Streaming
+*Accédez directement aux liens de streaming (TRUEFRENCH, VOSTFR)*
+
+![Streaming](./scrapo_screen6.png)
+
+</div>
+
+---
+
 ## 🎬 Fonctionnalités
 
 <table>
